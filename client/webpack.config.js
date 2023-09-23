@@ -7,8 +7,6 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const { InjectManifest } = require('workbox-webpack-plugin');
 const ASSET_PATH = process.env.ASSET_PATH || "/"
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
 
 module.exports = () => {
   return {
