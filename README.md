@@ -12,7 +12,7 @@
 
 ## Description
 
-A text editor for tech savy tech heads! I wanted to show what I had learned creating progressive web applications by making a text editor using next-gen javascript. It can be used offline, saves the content of the text editor when unfocused, and can be installed locally to your desktop as well.
+A text editor for tech-savvy tech heads! I wanted to show what I had learned creating progressive web applications by making a text editor using next-gen JavaScript. It can be used offline, saves the content of the text editor when unfocused, and can be installed locally to your desktop as well.
 
 ## Installation
 
@@ -20,8 +20,8 @@ Run "npm run install" from command-line to install dependencies, and if deployin
 
 ## Usage
 This is a text editor application that you can use on any device. It has storage, can run offline, and be installed on your desktop.  
-Here is a link to the application deployment on Heroku: [Application](YourURLHERE)  
-![Preview Picture](YourPreviewScreenshot)
+Here is a link to the application deployment on Heroku: [Application](https://tigerpawtexteditor-a6c781c53492.herokuapp.com/)  
+![Preview Picture](./assets/images/preview.png)
 This application is useful for making comments and blogs using a functional progressive web app for blogging comments on all tech, new to old.
 
 ## Contributing
