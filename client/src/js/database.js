@@ -29,7 +29,7 @@ export const getDb = async () => {
   const store = transaction.objectStore('jate');
   const content = await store.getAll();
   await transaction.complete;
-  return content;
+  return content.value;
 };
 
 initdb();
