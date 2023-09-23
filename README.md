@@ -5,38 +5,29 @@
  - [Description](#description)
  - [Installation](#installation)
  - [Usage](#usage)
- - [Testing](#testing)
- - [Questions](#questions)
+ - [Contributing](#contributing)
  - [Contact](#contact)
  - [License](#license)
 
 
 ## Description
 
-A text editor for tech savy tech heads!
+A text editor for tech savy tech heads! I wanted to show what I had learned creating progressive web applications by making a text editor using next-gen javascript. It can be used offline, saves the content of the text editor when unfocused, and can be installed locally to your desktop as well.
 
 ## Installation
 
-installation of Heroku and CLI is needed for deployment.(https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
+Run "npm run install" from command-line to install dependencies, and if deploying locally, "npm run start" as well
 
 ## Usage
-
-Making comments and blogs using a functional web app for blogging comments on new to old tech.
+This is a text editor application that you can use on any device. It has storage, can run offline, and be installed on your desktop.  
+Here is a link to the application deployment on Heroku: [Application](YourURLHERE)  
+![Preview Picture](YourPreviewScreenshot)
+This application is useful for making comments and blogs using a functional progressive web app for blogging comments on all tech, new to old.
 
 ## Contributing
 
 
-
-## Testing
-
-npm run start run on heroku
-
-## Questions
- FAQ:
-
-no
-
-Github: [cromananimation](https://github.com/cromananimation)
+ Github: [cromananimation](https://github.com/cromananimation)
 
  Email: cromanaimation@gmail.com
 
