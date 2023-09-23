@@ -4,13 +4,58 @@ const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const path = require('path');
+
 const { InjectManifest } = require('workbox-webpack-plugin');
 const ASSET_PATH = process.env.ASSET_PATH || "/"
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
 
 module.exports = () => {
+  return {
+    plugins: [
+      new WorkboxWebpackPlugin.InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
+      }),
+      new WebpackPwaManifest({
+        filename: 'manifest.json',
+        name: 'textEditor',
+        short_name: 'TE',
+        description: 'A simple text editor',
+        start_url: '.',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#31a9e1',
+        icons: [
+          {
+            src: path.resolve('src/assets/icon.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          }
+        ]
+      }),
+    ],
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+        },
+      ],
+    },
+  };
+};
+/*module.exports = () => {
   return {
     mode: 'development',
     entry: {
@@ -23,9 +68,9 @@ module.exports = () => {
     },
     plugins: [
       
-    ],
+    ],*/
 
-    module: {
+   /* module: {
       rules: [
         {
           test: /.css$/i,
@@ -37,11 +82,4 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
-            }
-          }
-        },
-      ],
-    },
-  };
-};
+              presets: ['@babel/preset-env']*/
